@@ -5,7 +5,10 @@ set expandtab
 set softtabstop=4
 set shiftround
 set autoindent
+set number
+set colorcolumn=90
 
+"remapping
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -15,7 +18,22 @@ noremap <Right> <NOP>
 :map <CR> <Leader>
 :map <Space> :
 
-set number
+"highlight line and column
 :hi CursorLine   cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkred guifg=white
 :hi CursorColumn cterm=NONE ctermbg=darkblue ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+
+"refresh vimrc
+map <leader>s :source ~/.vimrc<CR>
+set hidden
+set history=100
+
+"cancel search highlighting using esc key
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+
+"open previous file
+nnoremap <leader><leader> :e#<CR>
+
+"show matchiing parenthasis
+set showmatch
+

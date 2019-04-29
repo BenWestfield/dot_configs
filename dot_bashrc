@@ -10,7 +10,7 @@ esac
 
 #alias
 alias update="sudo ~/scripts/update.sh"
-alias shutdown="shutdown now"
+alias shutdown="shutdown now" 
 alias external_ip="/usr/lib/i3blocks/externalip"
 
 # some more ls aliases
@@ -113,8 +113,3 @@ eval `opam config env`
 
 #enforce transparent windows
 compton -CGf  -b -i 0.65 --vsync opengl
-
-
-##key rebinding:
-setxkbmap -option caps:swapescape
-
